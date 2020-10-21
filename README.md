@@ -34,6 +34,25 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(covid)
+library(tibble)
+coronavirus
+#> # A tibble: 200,960 x 9
+#>    date  location location_type location_code location_code_t… data_type value
+#>    <chr> <chr>    <chr>         <chr>         <chr>            <chr>     <dbl>
+#>  1 7/6/… Afghani… country       AF            iso_3166_2       cases_new   791
+#>  2 6/6/… Afghani… country       AF            iso_3166_2       cases_new   582
+#>  3 5/6/… Afghani… country       AF            iso_3166_2       cases_new   915
+#>  4 18/5… Afghani… country       AF            iso_3166_2       deaths_n…     4
+#>  5 8/6/… Afghani… country       AF            iso_3166_2       cases_new   575
+#>  6 12/6… Afghani… country       AF            iso_3166_2       cases_new   656
+#>  7 9/6/… Afghani… country       AF            iso_3166_2       cases_new   542
+#>  8 4/6/… Afghani… country       AF            iso_3166_2       cases_new   787
+#>  9 17/5… Afghani… country       AF            iso_3166_2       deaths_n…     1
+#> 10 19/5… Afghani… country       AF            iso_3166_2       deaths_n…     5
+#> # … with 200,950 more rows, and 2 more variables: lat <dbl>, long <dbl>
+n_countries(coronavirus)
+#> Warning: Unknown or uninitialised column: `country`.
+#> [1] 0
 ## basic example code
 ```
 
