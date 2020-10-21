@@ -82,6 +82,25 @@
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">covid</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span>
+<span class="va">coronavirus</span>
+<span class="co">#&gt; # A tibble: 200,960 x 9</span>
+<span class="co">#&gt;    date  location location_type location_code location_code_t… data_type value</span>
+<span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 7/6/… Afghani… country       AF            iso_3166_2       cases_new   791</span>
+<span class="co">#&gt;  2 6/6/… Afghani… country       AF            iso_3166_2       cases_new   582</span>
+<span class="co">#&gt;  3 5/6/… Afghani… country       AF            iso_3166_2       cases_new   915</span>
+<span class="co">#&gt;  4 18/5… Afghani… country       AF            iso_3166_2       deaths_n…     4</span>
+<span class="co">#&gt;  5 8/6/… Afghani… country       AF            iso_3166_2       cases_new   575</span>
+<span class="co">#&gt;  6 12/6… Afghani… country       AF            iso_3166_2       cases_new   656</span>
+<span class="co">#&gt;  7 9/6/… Afghani… country       AF            iso_3166_2       cases_new   542</span>
+<span class="co">#&gt;  8 4/6/… Afghani… country       AF            iso_3166_2       cases_new   787</span>
+<span class="co">#&gt;  9 17/5… Afghani… country       AF            iso_3166_2       deaths_n…     1</span>
+<span class="co">#&gt; 10 19/5… Afghani… country       AF            iso_3166_2       deaths_n…     5</span>
+<span class="co">#&gt; # … with 200,950 more rows, and 2 more variables: lat &lt;dbl&gt;, long &lt;dbl&gt;</span>
+<span class="fu"><a href="reference/n_countries.html">n_countries</a></span><span class="op">(</span><span class="va">coronavirus</span><span class="op">)</span>
+<span class="co">#&gt; Warning: Unknown or uninitialised column: `country`.</span>
+<span class="co">#&gt; [1] 0</span>
 <span class="co">## basic example code</span></pre></div>
 <p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
