@@ -10,8 +10,12 @@ n_countries(data)
 \item{data}{a dataset containing a \code{country} column}
 }
 \value{
-
+sum of country during this epdemic
 }
 \description{
 count the number of countried in dataset
+}
+\examples{
+n_countries(coronavirus)
+
 }
