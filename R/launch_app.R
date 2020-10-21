@@ -1,9 +1,9 @@
 #' Function to launch the shiny application
+#' 
+#' @title launch_app
 #' @author chenjie
 #' 
 #' @return shinyapp
-#' 
-#' @description This function can be used to launch shiny app in package.
 #' 
 #' @examples
 #' \dontrun{

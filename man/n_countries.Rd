@@ -2,7 +2,7 @@
 % Please edit documentation in R/n_countries.R
 \name{n_countries}
 \alias{n_countries}
-\title{count the number of countried in dataset}
+\title{n_countries}
 \usage{
 n_countries(data)
 }
@@ -11,8 +11,13 @@ n_countries(data)
 }
 \value{
 sum of country during this epdemic
+
+sum of country during this epdemic
 }
 \description{
+it help people count the country
+}
+\details{
 count the number of countried in dataset
 }
 \examples{
