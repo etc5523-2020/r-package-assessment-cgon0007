@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="It is about covid-19, hepl people to understand it">
-<meta property="og:description" content="The goal of covid_tracker is to provid the covid-19 data and function for the people to explore.">
+<meta property="og:description" content="The goal of covid is to provid the covid-19 data and function for the people to explore. and it contain some function help us to show thedata.This package can intuitively display the countries with the most diagnoses, deaths, and recovery, and it can also directly see the changes during the epidemic in different countries, and use this as a basis to judge whether the epidemic prevention measures in different countries are effective">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -46,6 +46,18 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/coronavirus.html">the coronavirus dataset</a>
+    </li>
+  </ul>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
 </div>
@@ -59,9 +71,9 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="covid_tracker" class="section level1">
+<div id="covid" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#covid_tracker" class="anchor"></a>covid_tracker</h1></div>
+<a href="#covid" class="anchor"></a>covid</h1></div>
 <!-- badges: start -->
 
 <p>The goal of covid_tracker is to provid the covid-19 data and function for the people to explore.</p>
@@ -70,7 +82,7 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of covid_tracker from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"covid_tracker"</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"covid"</span><span class="op">)</span></pre></div>
 <p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
@@ -102,20 +114,31 @@
 <span class="co">#&gt; Warning: Unknown or uninitialised column: `country`.</span>
 <span class="co">#&gt; [1] 0</span>
 <span class="co">## basic example code</span></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span>
-<span class="co">#&gt;      speed           dist       </span>
-<span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span>
-<span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span>
-<span class="co">#&gt;  Median :15.0   Median : 36.00  </span>
-<span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span>
-<span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span>
-<span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub!</p>
+</div>
+<div id="shiny-part" class="section level2">
+<h2 class="hasAnchor">
+<a href="#shiny-part" class="anchor"></a>shiny part</h2>
+<p>User can choose to run shinyChromosome installed on local computers (Windows, Mac or Linux) for a more preferable experience. hint(the app means that:covid19-tracker-shinyapp) Step 1: Install R and RStudio</p>
+<p>Before running the app you will need to have R and RStudio installed (tested with R 3.5.0 and RStudio 1.1.419). Please check CRAN (<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>) for the installation of R. Please check <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a> for the installation of RStudio.</p>
+<p>Step 2: Install the R Shiny package and other packages required by shinyChromosome</p>
+<p>Start an R session using RStudio and run these lines:</p>
+<div id="try-an-http-cran-mirror-if-https-cran-mirror-doesnt-work" class="section level3">
+<h3 class="hasAnchor">
+<a href="#try-an-http-cran-mirror-if-https-cran-mirror-doesnt-work" class="anchor"></a>try an http CRAN mirror if https CRAN mirror doesn’t work</h3>
+<p><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("shiny")</a></code> <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("ggplot2")</a></code> <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("shinythemes")</a></code> <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("coronavirus")</a></code></p>
+</div>
+<div id="install-shinycovid_tracker" class="section level3">
+<h3 class="hasAnchor">
+<a href="#install-shinycovid_tracker" class="anchor"></a>install shiny:covid_tracker</h3>
+<p><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("devtools")</a></code> <code>devtools::install_github("~cgon0007/app", force=TRUE)</code></p>
+<p>Step 3: Start the app</p>
+<p>Start an R session using RStudio and run these lines:</p>
+<p><code><a href="https://shiny.rstudio.com/reference/shiny/latest/runUrl.html">shiny::runGitHub("app", "cgon0007")</a></code></p>
+<p>This command will download the code of shinyapp from GitHub to a temporary directory of your computer and then launch the app in the web browser. Once the web browser was closed, the downloaded code of app would be deleted from your computer. Next time when you run this command in RStudio, it will download the source code of appcovid19tracker from GitHub to a temporary directory again. This process is frustrating since it takes some time to download the code of shinyChromosome from GitHub.</p>
+<p>Users are suggested to download the source code of shinyChromosome from GitHub to a fixed directory of your computer, such as ‘E:’ on Windows.a zip file named ‘app-master.zip’ would be downloaded to the disk of your computer. Move this file to ‘E:’ and unzip this file. Then a directory named ‘app’ would be generated in ‘E:’.</p>
+<p>Then you can start the app by running these lines in RStudio.</p>
+<p><code><a href="http://shiny.rstudio.com">library(shiny)</a></code> <code>runApp("E:/apps/app-master", launch.browser = TRUE)</code></p>
+</div>
 </div>
 </div>
   </div>
