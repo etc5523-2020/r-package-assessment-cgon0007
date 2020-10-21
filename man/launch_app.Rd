@@ -2,7 +2,7 @@
 % Please edit documentation in R/launch_app.R
 \name{launch_app}
 \alias{launch_app}
-\title{Function to launch the shiny application}
+\title{launch_app}
 \usage{
 launch_app()
 }
@@ -10,7 +10,7 @@ launch_app()
 shinyapp
 }
 \description{
-This function can be used to launch shiny app in package.
+Function to launch the shiny application
 }
 \examples{
 \dontrun{

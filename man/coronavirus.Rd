@@ -5,7 +5,21 @@
 \alias{coronavirus}
 \title{coronavirus}
 \format{
-A data frame with 9 variables.
+A data frame with 9 variables:
+\itemize{
+\item \strong{data}:the data
+\item \strong{data_type}:Data in Yyy
+-\strong{lat}:Latitude of center of geographic region, defined as either
+country or, if available, province
+-\strong{location}Name of province/state, for countries where data is
+provided split across multiple provinces/states
+-\strong{location_code}:Name of country/region
+-\strong{location_code_type}:the type of location
+-\strong{location_type}:country
+-\strong{long}:Longitude of center of geographic region, defined as either
+country or, if available, province
+-\strong{value}Number of cases on given date
+}
 }
 \source{
 Johns Hopkins University Center for Systems Science and Engineering
@@ -15,19 +29,11 @@ Johns Hopkins University Center for Systems Science and Engineering
 coronavirus
 }
 \description{
-coronavirus
+the covid-19 dataset, and some function can help people to understand and explore this illness
 }
 \details{
 comment:
 this dataset have 200960 observe and 9 varibales,which is data,location, data type, latitude, and longitude
-This coronavirus dataset has the following fields:
-date - The date of the summary
-province - The province or state, when applicable
-country - The country or region name
-lat - Latitude point
-long - Longitude point
-cases - the number of daily cases (corresponding to the case type)
-(find this dataset in the package coronavirus)
 
 The dataset contains the daily summary of Coronavirus cases
 (confirmed, death, and recovered), by state/province.
