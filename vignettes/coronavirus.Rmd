@@ -1,0 +1,105 @@
+---
+title: "the coronavirus dataset"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{the coronavirus dataset}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+```{r setup}
+library(covid)
+library(ggplot2)
+library(dplyr)
+```
+# DESCRIPTION
+this data contain 2000960 observations and 9 variables.
+Docs: data ,data_type ,lat ,location ,location_code ,location_code_type,location_type,long ,value.
+@description the covid-19 dataset, and some function can help people to understand and explore this illness
+
+ @format A data frame with 9 variables
+ 
+**data**:the data
+- **data_type**:Data in Yyy
+ -**lat**:Latitude of center of geographic region, defined as either
+ country or, if available, province
+ -**location**Name of province/state, for countries where data is
+  provided split across multiple provinces/states   
+  -**location_code**:Name of country/region
+  -**location_code_type**:the type of location
+ -**location_type**:country
+ -**long**:Longitude of center of geographic region, defined as either
+  country or, if available, province
+  -**value**Number of cases on given date
+ @source Johns Hopkins University Center for Systems Science and Engineering
+(JHU CCSE) Coronavirus \href{https://systems.jhu.edu/research/public-health/ncov/}{website}.
+ @keywords datasets coronavirus COVID19
+ @details The dataset contains the daily summary of Coronavirus cases
+(confirmed, death, and recovered), by state/province.
+# plot 
+```{r}
+conf_df <- coronavirus %>% 
+  filter(data_type == "cases_new") %>%
+  group_by(location) %>%
+  summarise(total_cases = sum(value)) %>%
+  arrange(-total_cases) %>%
+  head( 10)
+
+ library(ggplot2)
+ggplot(conf_df,aes(x=location,y=total_cases,fill=location))+
+  geom_bar(stat = "identity", alpha = 0.7) + 
+  coord_polar()+
+  theme(panel.border=element_blank())  
+
+```
+
+```{r}
+conf_df1 <- coronavirus %>% 
+  filter(data_type == "deaths_new") %>%
+  group_by(location) %>%
+  summarise(deaths = sum(value)) %>%
+  arrange(-deaths) %>%
+  head( 10)
+
+ library(ggplot2)
+ggplot(conf_df1,aes(x=location,y=deaths,fill=location))+
+  geom_bar(stat = "identity", alpha = 0.7) + 
+  coord_polar()+
+  theme(panel.border=element_blank())  
+
+```
+```{r}
+conf_df2 <- coronavirus %>% 
+  filter(data_type == "recovered_new") %>%
+  group_by(location) %>%
+  summarise(recovered = sum(value)) %>%
+  arrange(-recovered) %>%
+  head( 10)
+
+ library(ggplot2)
+ggplot(conf_df2,aes(x=location,y=recovered,fill=location))+
+  geom_bar(stat = "identity", alpha = 0.7) + 
+  coord_polar()+
+  theme(panel.border=element_blank())  
+```
+
+
+
+
+
+
+
+
+
+
+
+

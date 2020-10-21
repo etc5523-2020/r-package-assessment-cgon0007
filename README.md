@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# covid\_tracker
+# covid
 
 <!-- badges: start -->
 
@@ -18,7 +18,7 @@ You can install the released version of covid\_tracker from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("covid_tracker")
+install.packages("covid")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
@@ -56,26 +56,52 @@ n_countries(coronavirus)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## shiny part
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+User can choose to run shinyChromosome installed on local computers
+(Windows, Mac or Linux) for a more preferable experience. hint(the app
+means that:covid19-tracker-shinyapp) Step 1: Install R and RStudio
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+Before running the app you will need to have R and RStudio installed
+(tested with R 3.5.0 and RStudio 1.1.419). Please check CRAN
+(<https://cran.r-project.org/>) for the installation of R. Please check
+<https://www.rstudio.com/> for the installation of RStudio.
 
-You can also embed plots, for example:
+Step 2: Install the R Shiny package and other packages required by
+shinyChromosome
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+Start an R session using RStudio and run these lines:
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+### try an http CRAN mirror if https CRAN mirror doesn’t work
+
+`install.packages("shiny")` `install.packages("ggplot2")`
+`install.packages("shinythemes")` `install.packages("coronavirus")`
+
+### install shiny:covid\_tracker
+
+`install.packages("devtools")`
+`devtools::install_github("~cgon0007/app", force=TRUE)`
+
+Step 3: Start the app
+
+Start an R session using RStudio and run these lines:
+
+`shiny::runGitHub("app", "cgon0007")`
+
+This command will download the code of shinyapp from GitHub to a
+temporary directory of your computer and then launch the app in the web
+browser. Once the web browser was closed, the downloaded code of app
+would be deleted from your computer. Next time when you run this command
+in RStudio, it will download the source code of appcovid19tracker from
+GitHub to a temporary directory again. This process is frustrating since
+it takes some time to download the code of shinyChromosome from GitHub.
+
+Users are suggested to download the source code of shinyChromosome from
+GitHub to a fixed directory of your computer, such as ‘E:’ on Windows.a
+zip file named ‘app-master.zip’ would be downloaded to the disk of your
+computer. Move this file to ‘E:’ and unzip this file. Then a directory
+named ‘app’ would be generated in ‘E:’.
+
+Then you can start the app by running these lines in RStudio.
+
+`library(shiny)` `runApp("E:/apps/app-master", launch.browser = TRUE)`

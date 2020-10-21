@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "cgon0007@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The goal of covid_tracker is to provid the covid-19 data and function for the people to explore.
+Description: The goal of covid is to provid the covid-19 data and function for the people to explore. and it contain some function help us to show thedata.This package can intuitively display the countries with the most diagnoses, deaths, and recovery, and it can also directly see the changes during the epidemic in different countries, and use this as a basis to judge whether the epidemic prevention measures in different countries are effective
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -18,4 +18,9 @@ Depends:
 Imports: 
     dplyr,
     tibble,
-    shiny
+    shiny,
+    ggplot2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
