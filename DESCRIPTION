@@ -1,5 +1,5 @@
-Package: covid_tracker
-Title: It is about covid-19, hepl people to understand it.
+Package: covid
+Title: It is about covid-19, hepl people to understand it
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "chenjie",
@@ -7,9 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "cgon0007@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: it is provid the covid-19 data and function for the people to explore.
+Description: The goal of covid_tracker is to provid the covid-19 data and function for the people to explore.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)

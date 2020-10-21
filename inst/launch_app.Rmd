@@ -1,5 +1,5 @@
 ---
-title: "launch_app"
+title: "help_launch_app"
 output: html_notebook
 ---
 User can choose to run shinyChromosome installed on local computers (Windows, Mac or Linux) for a more preferable experience.
