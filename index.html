@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>It is about covid-19, hepl people to understand it • covid</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -38,10 +38,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
+  <a href="articles/coronavirus.html">get started</a>
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
@@ -71,12 +68,13 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="covid" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#covid" class="anchor"></a>covid</h1></div>
 <!-- badges: start -->
 
-<p>The goal of covid_tracker is to provid the covid-19 data and function for the people to explore.</p>
+<p>The goal of covid package is to provid the covid-19 data and function for the people to explore. and it contain a coronavirus dateset, which have 2000960 observations and 9 variables. Docs: data ,data_type ,lat ,location ,location_code ,location_code_type,location_type,long ,value. <strong>data</strong>:the data <strong>data_type</strong>:Data in Yyy <strong>lat</strong>:Latitude of center of geographic region, defined as either country or, if available, province <strong>location</strong>Name of province/state, for countries where data is provided split across multiple provinces/states<br><strong>location_code</strong>:Name of country/region <strong>location_code_type</strong>:the type of location <strong>location_type</strong>:country/state <strong>long</strong>:Longitude of center of geographic region, defined as either country or, if available, province <strong>value</strong>Number of cases on given date</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -111,17 +109,28 @@
 <span class="co">#&gt; 10 19/5… Afghani… country       AF            iso_3166_2       deaths_n…     5</span>
 <span class="co">#&gt; # … with 200,950 more rows, and 2 more variables: lat &lt;dbl&gt;, long &lt;dbl&gt;</span>
 <span class="fu"><a href="reference/n_countries.html">n_countries</a></span><span class="op">(</span><span class="va">coronavirus</span><span class="op">)</span>
-<span class="co">#&gt; Warning: Unknown or uninitialised column: `country`.</span>
-<span class="co">#&gt; [1] 0</span>
+<span class="co">#&gt; [1] 267</span>
 <span class="co">## basic example code</span></pre></div>
+<div id="plot-example" class="section level3">
+<h3 class="hasAnchor">
+<a href="#plot-example" class="anchor"></a>plot example</h3>
+<p><img src="003.png" width="50%"></p>
+<p><img src="03.png" width="50%"></p>
+</div>
 </div>
 <div id="shiny-part" class="section level2">
 <h2 class="hasAnchor">
 <a href="#shiny-part" class="anchor"></a>shiny part</h2>
-<p>User can choose to run shinyChromosome installed on local computers (Windows, Mac or Linux) for a more preferable experience. hint(the app means that:covid19-tracker-shinyapp) Step 1: Install R and RStudio</p>
+<div id="here-is-the-picture-of-shiny-the-top_10-new-cases-and-new-case-trend-plot" class="section level3">
+<h3 class="hasAnchor">
+<a href="#here-is-the-picture-of-shiny-the-top_10-new-cases-and-new-case-trend-plot" class="anchor"></a>here is the picture of shiny –the top_10 new cases and new case trend plot</h3>
+<p>. <img src="shinycut.png" width="50%"> .</p>
+<p>. <img src="abc.png" width="50%"></p>
+<p>. User can choose to run shinyChromosome installed on local computers (Windows, Mac or Linux) for a more preferable experience. hint(the app means that:covid19-tracker-shinyapp) Step 1: Install R and RStudio</p>
 <p>Before running the app you will need to have R and RStudio installed (tested with R 3.5.0 and RStudio 1.1.419). Please check CRAN (<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>) for the installation of R. Please check <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a> for the installation of RStudio.</p>
 <p>Step 2: Install the R Shiny package and other packages required by shinyChromosome</p>
 <p>Start an R session using RStudio and run these lines:</p>
+</div>
 <div id="try-an-http-cran-mirror-if-https-cran-mirror-doesnt-work" class="section level3">
 <h3 class="hasAnchor">
 <a href="#try-an-http-cran-mirror-if-https-cran-mirror-doesnt-work" class="anchor"></a>try an http CRAN mirror if https CRAN mirror doesn’t work</h3>
@@ -141,6 +150,16 @@
 </div>
 </div>
 </div>
+<div id="reference" class="section level1">
+<h1 class="hasAnchor">
+<a href="#reference" class="anchor"></a>REFERENCE</h1>
+<div id="citation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#citation" class="anchor"></a>citation</h2>
+<p>h2(“shiny,coronavirus,tidyverse,plotly,ggplot2”) h4(" Winston Chang, Joe Cheng, JJ Allaire, Yihui Xie and Jonathan McPherson (2020). shiny: Web Application Framework for R. R package version 1.5.0. <a href="https://CRAN.R-project.org/package=shiny" class="uri">https://CRAN.R-project.org/package=shiny</a> A BibTeX entry for LaTeX users is @Manual{, title = {shiny: Web Application Framework for R}, author = {Winston Chang and Joe Cheng and JJ Allaire and Yihui Xie and Jonathan McPherson}, year = {2020}, note = {R package version 1.5.0}, url = {<a href="https://CRAN.R-project.org/package=shiny" class="uri">https://CRAN.R-project.org/package=shiny</a>}, }“), h1(”.“), h4(”Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a> A BibTeX entry for LaTeX users is @Article{, title = {Welcome to the {tidyverse}}, author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D’Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani}, year = {2019}, journal = {Journal of Open Source Software}, volume = {4}, number = {43}, pages = {1686}, doi = {10.21105/joss.01686}, } “), h1(”.“), h4(” C. Sievert. Interactive Web-Based Data Visualization with R, plotly, and shiny. Chapman and Hall/CRC Florida, 2020. A BibTeX entry for LaTeX users is @Book{, author = {Carson Sievert}, title = {Interactive Web-Based Data Visualization with R, plotly, and shiny}, publisher = {Chapman and Hall/CRC}, year = {2020}, isbn = {9781138331457}, url = {<a href="https://plotly-r.com" class="uri">https://plotly-r.com</a>}, }“), h1(”.“), h4(”Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset. R package version 0.3.0. <a href="https://CRAN.R-project.org/package=coronavirus" class="uri">https://CRAN.R-project.org/package=coronavirus</a> A BibTeX entry for LaTeX users is @Manual{, title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset}, author = {Rami Krispin and Jarrett Byrnes}, year = {2020}, note = {R package version 0.3.0}, url = {<a href="https://CRAN.R-project.org/package=coronavirus" class="uri">https://CRAN.R-project.org/package=coronavirus</a>}, }“), h1(”.“), h4(”H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016. A BibTeX entry for LaTeX users is @Book{, author = {Hadley Wickham}, title = {ggplot2: Elegant Graphics for Data Analysis}, publisher = {Springer-Verlag New York}, year = {2016}, isbn = {978-3-319-24277-4}, url = {<a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a>}, }")</p>
+</div>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -162,6 +181,7 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/etc5523-2020/r-package-assessment-cgon0007/actions"><img src="https://github.com/etc5523-2020/r-package-assessment-cgon0007/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
 </ul>
 </div>
 </div>
