@@ -1,0 +1,24 @@
+template:
+ params:
+   bootswatch: cerulean
+   
+   
+   
+navbar:
+  structure:
+    left: [help]
+  components:
+    home: ~
+    help:
+      text: get started
+      href: articles/coronavirus.html 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
