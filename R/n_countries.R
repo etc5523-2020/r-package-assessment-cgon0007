@@ -9,7 +9,7 @@
 #' @return sum of country during this epdemic 
 #' @export
 n_countries<-function(data){
-  dplyr::n_distinct(data$country)
+  dplyr::n_distinct(data$location)
 }
 
 

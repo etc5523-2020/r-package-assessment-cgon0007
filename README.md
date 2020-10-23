@@ -7,10 +7,24 @@
 
 [![R build
 status](https://github.com/etc5523-2020/r-package-assessment-cgon0007/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-cgon0007/actions)
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![chenjie say hi
+:P](http://img.shields.io/badge/do%20i%20rock-passing-ff69bd.svg)
 <!-- badges: end -->
 
-The goal of covid\_tracker is to provid the covid-19 data and function
-for the people to explore.
+The goal of covid package is to provid the covid-19 data and function
+for the people to explore. and it contain a coronavirus dateset, which
+have 2000960 observations and 9 variables. Docs: data ,data\_type ,lat
+,location ,location\_code ,location\_code\_type,location\_type,long
+,value. **data**:the data **data\_type**:Data in Yyy **lat**:Latitude of
+center of geographic region, defined as either country or, if available,
+province **location**Name of province/state, for countries where data is
+provided split across multiple provinces/states  
+**location\_code**:Name of country/region **location\_code\_type**:the
+type of location **location\_type**:country/state **long**:Longitude of
+center of geographic region, defined as either country or, if available,
+province **value**Number of cases on given date
 
 ## Installation
 
@@ -56,9 +70,21 @@ n_countries(coronavirus)
 ## basic example code
 ```
 
+### plot example
+
+<img src="003.png" width="50%" />
+
+<img src="03.png" width="50%" />
+
 ## shiny part
 
-User can choose to run shinyChromosome installed on local computers
+### here is the picture of shiny –the top\_10 new cases and new case trend plot
+
+. <img src="shinycut.png" width="50%" /> .
+
+. <img src="abc.png" width="50%" />
+
+. User can choose to run shinyChromosome installed on local computers
 (Windows, Mac or Linux) for a more preferable experience. hint(the app
 means that:covid19-tracker-shinyapp) Step 1: Install R and RStudio
 
@@ -105,3 +131,46 @@ named ‘app’ would be generated in ‘E:’.
 Then you can start the app by running these lines in RStudio.
 
 `library(shiny)` `runApp("E:/apps/app-master", launch.browser = TRUE)`
+
+# REFERENCE
+
+## citation
+
+h2(“shiny,coronavirus,tidyverse,plotly,ggplot2”) h4(" Winston Chang, Joe
+Cheng, JJ Allaire, Yihui Xie and Jonathan McPherson (2020). shiny: Web
+Application Framework for R. R package version 1.5.0.
+<https://CRAN.R-project.org/package=shiny> A BibTeX entry for LaTeX
+users is @Manual{, title = {shiny: Web Application Framework for R},
+author = {Winston Chang and Joe Cheng and JJ Allaire and Yihui Xie and
+Jonathan McPherson}, year = {2020}, note = {R package version 1.5.0},
+url = {<https://CRAN.R-project.org/package=shiny>}, }“), h1(”.“),
+h4(”Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
+Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686> A
+BibTeX entry for LaTeX users is @Article{, title = {Welcome to the
+{tidyverse}}, author = {Hadley Wickham and Mara Averick and Jennifer
+Bryan and Winston Chang and Lucy D’Agostino McGowan and Romain François
+and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and
+Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton
+Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana
+Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan
+and Claus Wilke and Kara Woo and Hiroaki Yutani}, year = {2019}, journal
+= {Journal of Open Source Software}, volume = {4}, number = {43}, pages
+= {1686}, doi = {10.21105/joss.01686}, } “), h1(”.“), h4(” C. Sievert.
+Interactive Web-Based Data Visualization with R, plotly, and shiny.
+Chapman and Hall/CRC Florida, 2020. A BibTeX entry for LaTeX users is
+@Book{, author = {Carson Sievert}, title = {Interactive Web-Based Data
+Visualization with R, plotly, and shiny}, publisher = {Chapman and
+Hall/CRC}, year = {2020}, isbn = {9781138331457}, url =
+{<https://plotly-r.com>}, }“), h1(”.“), h4(”Rami Krispin and Jarrett
+Byrnes (2020). coronavirus: The 2019 Novel Coronavirus COVID-19
+(2019-nCoV) Dataset. R package version 0.3.0.
+<https://CRAN.R-project.org/package=coronavirus> A BibTeX entry for
+LaTeX users is @Manual{, title = {coronavirus: The 2019 Novel
+Coronavirus COVID-19 (2019-nCoV) Dataset}, author = {Rami Krispin and
+Jarrett Byrnes}, year = {2020}, note = {R package version 0.3.0}, url =
+{<https://CRAN.R-project.org/package=coronavirus>}, }“), h1(”.“), h4(”H.
+Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
+New York, 2016. A BibTeX entry for LaTeX users is @Book{, author =
+{Hadley Wickham}, title = {ggplot2: Elegant Graphics for Data Analysis},
+publisher = {Springer-Verlag New York}, year = {2016}, isbn =
+{978-3-319-24277-4}, url = {<https://ggplot2.tidyverse.org>}, }")
