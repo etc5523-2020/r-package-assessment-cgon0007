@@ -19,7 +19,8 @@ Imports:
     dplyr,
     tibble,
     shiny,
-    ggplot2
+    ggplot2,
+    pkgdown
 Suggests: 
     knitr,
     rmarkdown,

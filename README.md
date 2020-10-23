@@ -65,8 +65,7 @@ coronavirus
 #> 10 19/5… Afghani… country       AF            iso_3166_2       deaths_n…     5
 #> # … with 200,950 more rows, and 2 more variables: lat <dbl>, long <dbl>
 n_countries(coronavirus)
-#> Warning: Unknown or uninitialised column: `country`.
-#> [1] 0
+#> [1] 267
 ## basic example code
 ```
 

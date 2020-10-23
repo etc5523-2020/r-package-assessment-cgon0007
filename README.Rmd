@@ -79,7 +79,7 @@ knitr::include_graphics("03.png")
 ### here is the picture of shiny --the top_10 new cases and new case trend plot
 .
 ```{r , echo = FALSE, out.width='50%'}
-knitr::include_graphics("shinycut.png")
+knitr::include_graphics("shinycut.png")   
 ```
 .
 
